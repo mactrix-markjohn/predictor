@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <title>predictor</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-12 text-center div-center">
+
+          <div id="title-div">
+            <!--img src="img/joy.png"-->
+            <!--img src="img/vote.png"-->
+            <h1>Predictor</h1>
+
+            <div id="scoreframe">
+
+            </div>
+
+
+
+
+
+          </div>
+
+          <div id="message">
+            <div id="loader" class="alert alert-secondary">
+              <img src="img/loading.gif">
+              <div><b>LOADING</b></div>
+            </div>
+          </div>
+
+          <div>
+            <form>
+              <div class="fore-row">
+
+                <div class="col">
+                  <input type="text" id="phone" class="form-control" placeholder="Enter Phone Number">
+                </div>
+
+                <div class="col">
+                  <input type="text" id="name" class="form-control" placeholder="Your name">
+                </div>
+
+              </div>
+            </form>
+
+            <button id="registerBtn" class="btn btn-black">Register</button>
+            <button id="loginbtn" class="btn btn-black">Login</button>
+
+
+            <div id="login">
+
+                <h6>You are Logged in</h6>
+
+            </div>
+
+            <div id="failedlogin">
+
+              <h6>Sorry you could not login</h6>
+
+            </div>
+
+
+
+          </div>
+
+          <div id="predictRange">
+            <h5>Predictor Range</h5>
+            <button id="first" class="btn btn-black">Range: 1 - 10    20AE    10p</button>
+            <button id="second" class="btn btn-black">Range: 1 - 20   15AE    20p</button>
+            <button id="third" class="btn btn-black">Range: 1 - 50    10AE    50p</button>
+            <button id="forth" class="btn btn-black">Range: 1 - 100    5AE    100p</button>
+
+          </div>
+
+          <div id="prediction">
+            <h4>Prediction</h4>
+            <input type="number" class="form-control" placeholder="Make Prediction" id="predictfield">
+            <button id="predictbtn" class="btn btn-black">Predict</button>
+          </div>
+
+          <div id="predictresult">
+            <h1 id="correct">Correct</h1>
+            <h1 id="wrong">Wrong. Try again</h1>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+    <!--script id="template" type="x-tmpl-mustache">
+        {{#memeArray}}
+          <div class="card">
+            <h5 class="card-title">{{creatorName}}</h5>
+            <img class="card-img-top" src="{{memeUrl}}" alt="Card image cap">
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">{{votes}} attos</h6>
+              <input type="number" class="form-control" placeholder="Amount" id={{index}}>
+              <button class="btn voteBtn btn-block" id={{index}}>VOTE</button>
+            </div>
+          </div>
+        {{/memeArray}}
+    </script-->
+
+    <!--script id="template" type="x-tmpl-mustache">
+      {{#scoreboard}}
+        <div class="card">
+          <h5 class="card-title">Score: {{score}}</h5>
+        </div>
+      {{/scoreboard}}
+
+    </script-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+    <script src="index.js"></script>
+
+    <script src="https://unpkg.com/@aeternity/aepp-sdk/dist/aepp-sdk.browser-script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.js">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  </body>
+
+</html>

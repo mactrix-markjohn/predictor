@@ -1,0 +1,68 @@
+body{
+  background-color: #FFFFFF
+}
+
+
+#title-div{
+  color: #00AAFF;
+  left: auto;
+
+}
+
+#score{
+
+  margin-left: 1em;
+  color: #00AAFF;
+}
+
+
+.btn{
+  background-color: #00AAFF;
+  border-color: #FFFFFF;
+  color:white;
+  margin-top: 1em;
+}
+
+#loader {
+  margin: 1em;
+  color: #00AAFF;
+  display: none;
+}
+
+#login {
+  display:none;
+  color: #00AA00
+}
+
+#failedlogin{
+  display:none;
+  color: #AA0000
+}
+
+#predictRange{
+  display: none;
+}
+
+#prediction{
+  display: none;
+}
+
+#predictresult{
+  display: none;
+}
+
+#correct{
+  color: #00FF55;
+  display: none;
+}
+
+#wrong{
+  color: #AA0000;
+  display: none;
+}
+
+.container{
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
+}

@@ -1,0 +1,41 @@
+Deployment Address:
+
+ct_2hWRqQPr7qt3CybyhydiddDCTiz3M5jpHjb2ups7pVjvRFg9yp
+
+
+
+
+
+contract Predictor = 
+
+  record user = {
+    creatorAddress  :  address,
+    name            :  string,
+    phone           :  string,
+    point           :  int}
+    
+  record state = {
+    users           :  map(string,user),
+    userlength      :  int}
+    
+  entrypoint init() = {users = {}, userlength = 0}
+  
+  stateful entrypoint register(name' : string, phone' : string) = 
+    let user = {creatorAddress = Call.caller, name = name' , phone = phone', point = 0}
+    let phone = phone'
+    put(state{users[phone] = user, userlength = 0})
+    
+  entrypoint getUser(phone' : string) : user =
+    switch(Map.lookup(phone', state.users))
+      None => abort("There was no with that Phone Number")
+      Some(x) => x
+      
+  payable stateful entrypoint spend(phone' : string) =
+    let user = getUser(phone')
+    Chain.spend(user.creatorAddress, Call.value)
+    
+  stateful entrypoint update(phone' : string, points : int) = 
+    let user = getUser(phone')
+    let updatepoint = user.point + points
+    let updatedUsers = state.users{[phone'].point = updatepoint}
+    put(state{users = updatedUsers})

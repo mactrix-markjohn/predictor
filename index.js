@@ -36,7 +36,7 @@ const contractSource = hereDoc(function() {/*!
 
   */})
 
-const contractAddress = 'ct_2hWRqQPr7qt3CybyhydiddDCTiz3M5jpHjb2ups7pVjvRFg9yp';
+const contractAddress = 'ct_2Cgy5uoFLb1RBYEFLuquqJLcxSP7GceZRAo3M8w55Xkde7q2tX';
 var client = null;
 var memeArray = [];
 var memesLength = 0;

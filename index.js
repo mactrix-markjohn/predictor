@@ -54,6 +54,25 @@ var scoreframe = [];
 
 
 
+
+
+async function callStatic(func, args) {
+  const contract = await client.getContractInstance(contractSource, {contractAddress});
+  const calledGet = await contract.call(func, args ,{callStatic: true}).catch(e => console.error(e));
+  const decodedGet = await calledGet.decode().catch(e => console.error(e));
+
+  return decodedGet;
+
+}
+
+async function contractCall(func, args, value) {
+  const contract = await client.getContractInstance(contractSource, {contractAddress});
+  const calledSet = await contract.call(func, args, {amount: value}).catch(e => console.error(e));
+
+  return calledSet;
+}
+
+
 window.addEventListener('load',async () => {
   $("#loader").show();
 
@@ -84,22 +103,6 @@ window.addEventListener('load',async () => {
   $("#loader").hide();
 });
 
-
-async function callStatic(func, args) {
-  const contract = await client.getContractInstance(contractSource, {contractAddress});
-  const calledGet = await contract.call(func, args ,{callStatic: true}).catch(e => console.error(e));
-  const decodedGet = await calledGet.decode().catch(e => console.error(e));
-
-  return decodedGet;
-
-}
-
-async function contractCall(func, args, value) {
-  const contract = await client.getContractInstance(contractSource, {contractAddress});
-  const calledSet = await contract.call(func, args, {amount: value}).catch(e => console.error(e));
-
-  return calledSet;
-}
 
 function renderUser() {
   // memeArray = memeArray.sort(function(a,b){return b.votes-a.votes})

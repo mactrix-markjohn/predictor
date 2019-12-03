@@ -216,6 +216,8 @@ $('#loginbtn').click(async function(){
 
 $('#first').click(async function(){
 
+  $('predictfield').val() = ""
+
     const phone = ($('#phone').val());
     price = 20;
     point = 10;
@@ -233,6 +235,8 @@ $('#first').click(async function(){
 
 $('#second').click(async function(){
 
+  $('predictfield').val() = ""
+
   const phone = ($('#phone').val());
   price = 15;
   point = 20;
@@ -248,6 +252,8 @@ $('#second').click(async function(){
 
 $('#third').click(async function(){
 
+  $('predictfield').val() = ""
+
   const phone = ($('#phone').val());
   price = 10;
   point = 50;
@@ -262,6 +268,7 @@ $('#third').click(async function(){
 });
 
 $('#forth').click(async function(){
+  $('predictfield').val() = ""
 
   const phone = ($('#phone').val());
   price = 5;

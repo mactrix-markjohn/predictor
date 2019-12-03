@@ -160,7 +160,7 @@ function renderResult() {
 
 
   }else{
-    ('#correct').hide();
+    // ('#correct').hide();
     ('#wrong').show();
   }
 

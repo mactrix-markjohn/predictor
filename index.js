@@ -218,6 +218,8 @@ $('#first').click(async function(){
 
   $('predictfield').val() = ""
 
+  $("#loader").show();
+
     const phone = ($('#phone').val());
     price = 20;
     point = 10;
@@ -226,6 +228,9 @@ $('#first').click(async function(){
     permission = true;
 
     permissionGrant();
+    console.log("first button clicked")
+
+    $("#loader").hide();
 
 
 

@@ -145,6 +145,7 @@ function permissionGrant() {
 function renderResult() {
 
   $('#predictresult').show();
+  const phone = ($('#phone').val());
 
   if(answer){
 

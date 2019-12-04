@@ -142,12 +142,14 @@ function permissionGrant() {
 
 }
 
-function renderResult() {
+function renderResult(x,y) {
 
   $('#predictresult').show();
+  // const phone = ($('#phone').val());
 
-  if(answer){
-
+  if (x == y) {
+    answer = true;
+    
     ('#correct').show();
     ('#wrong').hide();
 
@@ -157,15 +159,13 @@ function renderResult() {
     scoreboard.push({score : userpoints});
     contractCall('update',[user.phone,userpoints],0);
 
-
-
   }else{
-    ('#correct').hide();
-    ('#wrong').show();
+    answer = false;
+    // ('#wrong').show();
+    console.log("wrong answer")
   }
-
-
 }
+
 
 
 
@@ -216,6 +216,10 @@ $('#loginbtn').click(async function(){
 
 $('#first').click(async function(){
 
+  console.log("first button clicked")
+
+  $("#loader").show();
+
     const phone = ($('#phone').val());
     price = 20;
     point = 10;
@@ -224,6 +228,9 @@ $('#first').click(async function(){
     permission = true;
 
     permissionGrant();
+    console.log("first button clicked")
+
+    $("#loader").hide();
 
 
 
@@ -233,6 +240,11 @@ $('#first').click(async function(){
 
 $('#second').click(async function(){
 
+  // $('predictfield').val() = ""
+  $('#loader').show();
+
+  console.log("Second button clicked")
+
   const phone = ($('#phone').val());
   price = 15;
   point = 20;
@@ -241,12 +253,17 @@ $('#second').click(async function(){
   permission = true;
 
   permissionGrant();
+  $('#loader').hide();
 
 
 
 });
 
 $('#third').click(async function(){
+
+
+  console.log("Third button clicked")
+  $('#loader').show();
 
   const phone = ($('#phone').val());
   price = 10;
@@ -256,12 +273,15 @@ $('#third').click(async function(){
   permission = true;
 
   permissionGrant();
-
+  $('#loader').hide();
 
 
 });
 
 $('#forth').click(async function(){
+  // $('predictfield').val() = ""
+  console.log("forth button clicked")
+  $('#loader').show();
 
   const phone = ($('#phone').val());
   price = 5;
@@ -271,6 +291,7 @@ $('#forth').click(async function(){
   permission = true;
 
   permissionGrant();
+  $('#loader').hide();
 
 
 
@@ -284,14 +305,9 @@ $('#predictbtn').click(async function(){
 
   randomnum = getRandomInt(mini,maxi);
 
-  if (predictnumber == randomnum) {
-    answer = true;
+  
 
-  }else{
-    answer = false;
-  }
-
-  renderResult();
+  renderResult(predictnumber, randomnum);
 
 
 

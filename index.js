@@ -241,7 +241,7 @@ $('#first').click(async function(){
 
 $('#second').click(async function(){
 
-  $('predictfield').val() = ""
+  // $('predictfield').val() = ""
 
   const phone = ($('#phone').val());
   price = 15;
@@ -258,7 +258,7 @@ $('#second').click(async function(){
 
 $('#third').click(async function(){
 
-  $('predictfield').val() = ""
+  // $('predictfield').val() = ""
 
   const phone = ($('#phone').val());
   price = 10;
@@ -274,7 +274,7 @@ $('#third').click(async function(){
 });
 
 $('#forth').click(async function(){
-  $('predictfield').val() = ""
+  // $('predictfield').val() = ""
 
   const phone = ($('#phone').val());
   price = 5;

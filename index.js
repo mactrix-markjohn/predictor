@@ -241,6 +241,7 @@ $('#first').click(async function(){
 $('#second').click(async function(){
 
   // $('predictfield').val() = ""
+  $('#loader').show();
 
   console.log("Second button clicked")
 
@@ -252,6 +253,7 @@ $('#second').click(async function(){
   permission = true;
 
   permissionGrant();
+  $('#loader').hide();
 
 
 
@@ -261,6 +263,7 @@ $('#third').click(async function(){
 
 
   console.log("Third button clicked")
+  $('#loader').show();
 
   const phone = ($('#phone').val());
   price = 10;
@@ -270,7 +273,7 @@ $('#third').click(async function(){
   permission = true;
 
   permissionGrant();
-
+  $('#loader').hide();
 
 
 });
@@ -278,6 +281,7 @@ $('#third').click(async function(){
 $('#forth').click(async function(){
   // $('predictfield').val() = ""
   console.log("forth button clicked")
+  $('#loader').show();
 
   const phone = ($('#phone').val());
   price = 5;
@@ -287,6 +291,7 @@ $('#forth').click(async function(){
   permission = true;
 
   permissionGrant();
+  $('#loader').hide();
 
 
 

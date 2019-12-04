@@ -161,7 +161,8 @@ function renderResult(x,y) {
 
   }else{
     answer = false;
-    ('#wrong').show();
+    // ('#wrong').show();
+    console.log("wrong answer")
   }
 }
 

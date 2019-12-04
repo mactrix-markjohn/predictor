@@ -216,7 +216,7 @@ $('#loginbtn').click(async function(){
 
 $('#first').click(async function(){
 
-  $('predictfield').val() = ""
+  console.log("first button clicked")
 
   $("#loader").show();
 
@@ -259,7 +259,8 @@ $('#second').click(async function(){
 
 $('#third').click(async function(){
 
-  // $('predictfield').val() = ""
+
+  console.log("Third button clicked")
 
   const phone = ($('#phone').val());
   price = 10;
@@ -276,6 +277,7 @@ $('#third').click(async function(){
 
 $('#forth').click(async function(){
   // $('predictfield').val() = ""
+  console.log("forth button clicked")
 
   const phone = ($('#phone').val());
   price = 5;

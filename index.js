@@ -142,13 +142,14 @@ function permissionGrant() {
 
 }
 
-function renderResult() {
+function renderResult(x,y) {
 
   $('#predictresult').show();
-  const phone = ($('#phone').val());
+  // const phone = ($('#phone').val());
 
-  if(answer){
-
+  if (x == y) {
+    answer = true;
+    
     ('#correct').show();
     ('#wrong').hide();
 
@@ -158,15 +159,12 @@ function renderResult() {
     scoreboard.push({score : userpoints});
     contractCall('update',[user.phone,userpoints],0);
 
-
-
   }else{
-    // ('#correct').hide();
+    answer = false;
     ('#wrong').show();
   }
-
-
 }
+
 
 
 
@@ -243,6 +241,8 @@ $('#second').click(async function(){
 
   // $('predictfield').val() = ""
 
+  console.log("Second button clicked")
+
   const phone = ($('#phone').val());
   price = 15;
   point = 20;
@@ -297,14 +297,9 @@ $('#predictbtn').click(async function(){
 
   randomnum = getRandomInt(mini,maxi);
 
-  if (predictnumber == randomnum) {
-    answer = true;
+  
 
-  }else{
-    answer = false;
-  }
-
-  renderResult();
+  renderResult(predictnumber, randomnum);
 
 
 

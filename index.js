@@ -86,30 +86,13 @@ window.addEventListener('load',async () => {
   $('#predictRange').hide();
   $('#prediction').hide();
   $('#predictresult').hide();
-  // for (let i = 1; i <= memesLength; i++) {
-  //   const meme = await callStatic('getMeme', [i]);
-  //
-  //   memeArray.push({
-  //     creatorName: meme.name,
-  //     memeUrl: meme.url,
-  //     index: i,
-  //     votes: meme.voteCount
-  //   });
-  //
-  // }
-  //
-  // renderMemes();
-  //
+  
   $("#loader").hide();
 });
 
 
 function renderUser() {
-  // memeArray = memeArray.sort(function(a,b){return b.votes-a.votes})
-  // var template = $('#template').html();
-  // Mustache.parse(template);
-  // var rendered = Mustache.render(template,{memeArray});
-  // $('#memeBody').html(rendered);
+ 
 
   if (login) {
     $('#predictRange').show();
@@ -186,11 +169,11 @@ $('#registerBtn').click(async function(){
   login = true;
   $("#loader").hide();
 
-  //scoreboard.push({score : 0});
+  
 
   renderUser();
 
-//  $("#loader").hide();
+
 
 })
 
@@ -208,7 +191,7 @@ $('#loginbtn').click(async function(){
   $("#loader").hide();
 
 
-  //$('#score').push({score : user.point});
+  
   renderUser();
 
 })
